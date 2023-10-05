@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Defining variables"""
+"""a module that defines annotated variables"""
 
 
 a: int = 1
