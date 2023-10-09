@@ -29,9 +29,7 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     return sorted(task.result() for task in tasks)
 
 
-async def main():
-    sorted_delays = await wait_n(n, max_delay)
-    print(sorted_delays)
-
 if __name__ == "__main__":
-    asyncio.run(main())
+    print(asyncio.run(wait_n(5, 5)))
+    print(asyncio.run(wait_n(10, 7)))
+    print(asyncio.run(wait_n(10, 0)))
