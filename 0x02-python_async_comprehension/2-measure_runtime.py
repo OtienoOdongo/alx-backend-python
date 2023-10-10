@@ -24,14 +24,12 @@ async def measure_runtime() -> float:
         float: The total runtime in seconds.
     """
     start_time = time.time()
-
-    """Executing async_comprehension four times in parallel"""
     await asyncio.gather(
         async_comprehension(),
         async_comprehension(),
         async_comprehension(),
         async_comprehension()
     )
-
     total_time = time.time() - start_time
+
     return total_time
